@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trackey!</title>
     <script type="module">
+      import { inject } from "https://esm.run/@vercel/analytics";
+      inject();
       //assets/index.8a76a908.js
       const p = function polyfill() {
         const relList = document.createElement("link").relList;
@@ -4739,22 +4741,22 @@ PERFORMANCE OF THIS SOFTWARE.
           let suffix = "';";
           let currentWprojects = JSON.stringify(prepareReport());
           let functionAsText = copyToHorizon.toString();
-          navigator.clipboard.writeText(prefix + " " + currentWprojects + " " + suffix + "\n" + functionAsText + "\n" + functionAsText.split(" ")[1].split("{")[0]);
+          // navigator.clipboard.writeText(prefix + " " + currentWprojects + " " + suffix + "\n" + functionAsText + "\n" + functionAsText.split(" ")[1].split("{")[0]);
         }
 
         // COPY FROM HORIZON
         let horizonRows2 = document.querySelectorAll(".project");
 
-        setTimeout(() => {
-          let projectNames = [];
+        // setTimeout(() => {
+        //   let projectNames = [];
 
-          horizonRows2.forEach((row) => {
-            let projectName = row.querySelector(".project-name").textContent.trim();
-            projectNames.push(projectName);
-          });
+        //   horizonRows2.forEach((row) => {
+        //     let projectName = row.querySelector(".project-name").textContent.trim();
+        //     projectNames.push(projectName);
+        //   });
 
-          navigator.clipboard.writeText(projectNames.join());
-        }, 2000);
+        //   navigator.clipboard.writeText(projectNames.join());
+        // }, 2000);
 
         function prepareReport() {
           currentWeekProjects = {};
